@@ -1,0 +1,66 @@
+.main-single-product {
+  display: grid;
+  align-items: center;
+  grid-template-columns: 1fr 2fr;
+  width: 80%;
+  padding: 8rem 5rem 5rem 5rem;
+}
+.main-single-product img {
+  width: 80%;
+}
+.main-single-product .img-container {
+  padding: 10%;
+}
+.main-single-product h2 {
+  font-family: "Playfair Display SC", serif;
+}
+.main-single-product .product-desc {
+  text-align: left;
+}
+.main-single-product .price-value {
+  font-family: "Playfair Display SC", serif;
+  font-size: 3em;
+  padding: 12px;
+}
+@media screen and (max-width: 720px) {
+  .main-single-product {
+    grid-template-columns: 1fr;
+    justify-items: stretch;
+  }
+}
+
+.main-single-product .add-cart {
+  display: inline-block;
+  transition: opacity 0.5s 0.1s ease-in;
+  /* position: absolute; */
+  top: 2rem;
+  right: 2rem;
+  transition: bottom 0.3s ease-out;
+  cursor: pointer;
+  background-color: #ffd814;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-family: monospace;
+  padding: 0.5rem;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+  z-index: 10;
+}
+.main-single-product .go-cart {
+  display: inline-block;
+  transition: opacity 0.5s 0.1s ease-in;
+  /* position: absolute; */
+  top: 2rem;
+  right: 2rem;
+  transition: bottom 0.3s ease-out;
+  cursor: pointer;
+  background-color: #077e1b;
+  border-radius: 1rem;
+  border: none;
+  font-size: 1rem;
+  font-family: monospace;
+  font-weight: bold;
+  color: #ffffff;
+  padding: 0.5rem;
+  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
