@@ -119,38 +119,12 @@ main {
   text-decoration: none;
   color: black;
 }
-/* .card-s:hover h4 {
-  inset: auto 1rem 3.75rem 1rem;
-  transition: inset 0.3s ease-out;
-} */
-.card-s:hover h4 {
-  /* inset: auto 1rem 3.75rem 1rem; */
-  /* box-shadow: 0 1px 35px 1px rgba(0, 0, 0, 0.2);
 
-  transition: inset 0.3s ease-out; */
-}
 .mainDiv:hover p,
 .mainDiv:hover a {
   opacity: 1;
   transition: opacity 0.5s 0.1s ease-in;
 }
-/* .mainDiv:hover .add-cart {
-  display: inline-block;
-  transition: opacity 0.5s 0.1s ease-in;
-  position: absolute;
-  top: 1rem;
-  right: 1rem;
-  transition: bottom 0.3s ease-out;
-  cursor: pointer;
-  background-color: #ffd814;
-  border-radius: 1rem;
-  border: none;
-  font-size: 1rem;
-  font-family: monospace;
-  padding: 0.5rem;
-  box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
-  z-index: 99;
-} */
 .mainDiv:hover .go-cart {
   display: inline-block;
   transition: opacity 0.5s 0.1s ease-in;
@@ -173,7 +147,6 @@ main {
 
 .mainDiv:hover img {
   transition: opacity 0.3s ease-in;
-  /* box-shadow: 0 1px 35px 1px rgba(0, 0, 0, 0.2); */
 
   opacity: 1;
 }
@@ -207,17 +180,9 @@ main {
     z-index: 10;
   }
   .mainDiv:hover {
-    /* transform: scale(0); */
-    /* transition: 0.3s ease-in; */
     box-shadow: 0 0 0 0 rgba(77, 75, 75, 0.2);
-    /* background-color: transparent; */
   }
 }
-
-/* .modal-body {
-  padding: 1rem 0;
-  width: 10rem;
-} */
 
 .modal-content {
   width: 90% !important;
