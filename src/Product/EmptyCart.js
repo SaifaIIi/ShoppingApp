@@ -22,7 +22,7 @@ function EmptyCart(props) {
                   <h3>
                     <strong>Your Cart is Empty</strong>
                   </h3>
-                  <h4>Add something to make me happy :</h4>
+                  <h4>Add something in Cart</h4>
                   <button
                   onClick={()=>{props.history.push("/")}}
                     class="btn btn-primary cart-btn-transform m-3"
