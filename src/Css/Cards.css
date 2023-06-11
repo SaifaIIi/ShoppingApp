@@ -162,7 +162,7 @@ main {
 }
 
 @media screen and (max-width: 800px) {
-  .add-cart {
+  .mainDiv .add-cart {
     display: inline-block !important;
     transition: opacity 0.5s 0.1s ease-in;
     position: absolute;
@@ -248,6 +248,75 @@ main {
   padding-right: 3.3em;
   padding-bottom: 0.71em;
   padding-left: 3.3em;
+}
+/* pricing */
+.actualPrice {
+  text-decoration: line-through;
+  font-size: 1.1rem;
+  /* margin-left: 12px; */
+  vertical-align: middle;
+  color: #878787;
+  font-family: "Roboto Condensed", sans-serif;
+    font-weight: bold;
+}
+
+.percentOff {
+  margin-left: 12px;
+  font-size: 16px;
+  font-weight: 500;
+  color: #388e3c;
+  vertical-align: middle;
+  font-family: Roboto, Arial, sans-serif;
+  font-weight: bold;
+
+}
+
+/* ratting */
+.ratting {
+  line-height: normal;
+  display: inline-block;
+  color: #fff;
+  padding: 4px 4px 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.green {
+  background-color: #388e3c;
+}
+.red {
+  background-color: #ff6161;
+}
+.orange {
+  background-color: #ff9f00;
+}
+.ratting img {
+  height: 16px;
+  /* text-decoration: none; */
+  /* color: inherit; */
+  /* border: brown; */
+  width: 14px;
+  /* margin: 0; */
+  padding: 0px 0px 3px 0px;
+  /* outline: auto; */
+  /* background-color: beige; */
+}
+.ratting span {
+  /* padding-top: 0.1rem; */
+}
+.ratting-wrapper {
+  position: absolute;
+  right: 1rem;
+  bottom: 10rem;
+}
+.ratting-count {
+  color: #878787;
+  font-weight: 600;
+  padding-left: 0.5rem;
+}
+.checked::before {
+  color: #ffa500 !important;
 }
 
 /* loader */
