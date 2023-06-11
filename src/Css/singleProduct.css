@@ -11,14 +11,14 @@
 .main-single-product .img-container {
   padding: 10%;
 }
-.main-single-product h2 {
+/* .main-single-product h2 {
   font-family: "Playfair Display SC", serif;
-}
+} */
 .main-single-product .product-desc {
   text-align: left;
 }
 .main-single-product .price-value {
-  font-family: "Playfair Display SC", serif;
+  font-family: Roboto,Arial,sans-serif;
   font-size: 3em;
   padding: 12px;
 }
@@ -26,7 +26,12 @@
   .main-single-product {
     grid-template-columns: 1fr;
     justify-items: stretch;
+    padding: 8rem 0rem 1rem 1.5rem;
+
   }
+}
+.product-desc .desc{
+  text-align: justify;
 }
 
 .main-single-product .add-cart {
@@ -63,4 +68,34 @@
   color: #ffffff;
   padding: 0.5rem;
   box-shadow: 0 10px 30px 5px rgba(0, 0, 0, 0.2);
+}
+
+.main-single-product .ratting {
+  line-height: normal;
+  /* display: inline-block; */
+  color: #fff;
+  display: flex;
+  padding: 4px 4px 2px 6px;
+  border-radius: 3px;
+  font-weight: 500;
+  font-size: 12px;
+  vertical-align: middle;
+}
+.main-single-product .ratting-wrapper {
+  position: static;
+  /* right: 1rem; */
+  /* bottom: 10rem; */
+  display: flex;
+  padding-left: 0.5rem;
+}
+.main-single-product .ratting img {
+  height: 18px;
+  /* text-decoration: none; */
+  /* color: inherit; */
+  /* border: brown; */
+  width: 18px;
+  /* margin: 0; */
+  padding: 1px 0px 3px 5px;
+  /* outline: auto; */
+  /* background-color: beige; */
 }

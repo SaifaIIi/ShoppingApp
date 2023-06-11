@@ -39,7 +39,6 @@ function MyCart(props) {
   const msg = useSelector((state) => state.allProducts.model.msg);
   const show = useSelector((state) => state.allProducts.model.show);
 
-
   const dispatch = useDispatch();
 
   if (!allDatas.length) {
@@ -50,6 +49,8 @@ function MyCart(props) {
     <div>
       <div className="cart-container">
         {allDatas.map((product) => {
+          let off = 100 - (product.price * 100) / product.actualPrice;
+
           return (
             <div className="cart" key={product.id}>
               <Link
@@ -66,11 +67,11 @@ function MyCart(props) {
                       Price:
                     </span>
                     &nbsp;
-                    <span className="mainPrice">{product.price}</span>
+                    <span className="mainPrice"> ₹{product.price}</span>
                     &nbsp;&nbsp;Total&nbsp;
                     <span className="ttlspan">
-                      {(product.qty * product.price).toFixed(2)}
-                    </span>{" "}
+                    ₹{(product.qty * product.price).toFixed(2)}
+                    </span>
                   </span>
                 </div>
               </Link>
@@ -133,8 +134,8 @@ function MyCart(props) {
           <>
             <div className="cart">
               <div className="subTotal">
-                Subtotal ({toTalCount} items){" "}
-                <div className="subTotalPrice">{toTalPrice.toFixed(2)}</div>
+                Subtotal ({toTalCount} items)
+                <div className="subTotalPrice"> ₹ {toTalPrice.toFixed(2)}</div>
               </div>
               <div className="proceed-buy">Proceed to checkout</div>
             </div>

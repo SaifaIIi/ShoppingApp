@@ -17,14 +17,22 @@ function App() {
       .get("https://fakestoreapi.com/products")
       .then((data) => {
         let products = data.data.map((e, i) => {
-          return { ...e, inCart: false, qty: 0, index: i };
+          return {
+            ...e,
+            inCart: false,
+            qty: 0,
+            index: i,
+            actualPrice: Math.floor(
+              Math.random() *
+                (Number(e.price) + Number(e.price) - Number(e.price) + 1) +
+                Number(e.price)
+            ),
+          };
         });
         dispatch(allData(products));
         dispatch(addCategory(products));
       })
-      .catch((er) => {
-        
-      });
+      .catch((er) => {});
   }, []);
 
   return (

@@ -46,6 +46,8 @@
 }
 .cart-container .cart .cart-desc p {
   margin: 0;
+  text-align: justify;
+
 }
 .cart-container .cart .cart-desc .spanTotal {
   font-size: 1.5rem;
@@ -98,6 +100,7 @@
   .cart-container .cart .cart-desc {
     width: 14rem;
   }
+  
   .cart-container .cart .cart-desc .spanTotal {
     font-size: 1rem;
   }

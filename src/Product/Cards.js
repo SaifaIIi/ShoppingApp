@@ -4,13 +4,13 @@ import { increment } from "../features/productDatas/allProducts";
 import { withRouter } from "react-router-dom";
 import toCamelCase from "./toCamelCase";
 
-
-
 function Cards(props) {
   // const count = useSelector((state) => state.allProducts.value);
   const dispatch = useDispatch();
+  let off = 100 - (props.price * 100) / props.actualPrice;
+
   return (
-    <div className="mainDiv">
+    <div className="mainDiv" title={props.description}>
       <button
         onClick={() => {
           if (props.qty) {
@@ -34,9 +34,31 @@ function Cards(props) {
         <div className="card-content">
           <h4>{toCamelCase(props.title)}</h4>
 
-          <h3> ₹{props.price}</h3>
+          <h3>
+            {" "}
+            ₹{props.price}{" "}
+            <span className="actualPrice"> ₹{props.actualPrice}</span>
+            <span className="percentOff">{off.toFixed(2)}% off</span>
+          </h3>
         </div>
-
+        <div className="ratting-wrapper">
+          <div
+            className={`ratting  ${
+              Math.floor(props.rating.rate) >= 3
+                ? "green"
+                : Math.floor(props.rating.rate) === 2
+                ? "orange"
+                : Math.floor(props.rating.rate) === 1
+                ? "red"
+                : "no"
+            }  `}
+          >
+            <span>{props.rating.rate}</span>{" "}
+            <img src={require("./star.png")} alt="star" />
+          </div>
+          <span className="ratting-count">({props.rating.count})</span>
+        </div>
+        &nbsp;&nbsp;
         {props.qty ? (
           <div className="added-cart-text">Added to Cart</div>
         ) : null}
